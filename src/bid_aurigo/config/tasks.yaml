@@ -1,0 +1,35 @@
+integrated_project_analysis_task:
+  description: >
+    Ask the user for their project,type of resources and the budget and provide market analysis as given below or any questions you feel like asking.
+    Scrape and aggregate real-time data from global financial platforms, geopolitical news, and industry reports. Analyze how factors like inflation,regulatory changes, and political stability,Market changes could impact construction projects in all spheres including rescources,timeline and budget. 
+    Wherever possible ensure to reason out and proove your point with numerical values and data.
+    For eg Donald Trump's trade war with China could have impacted the cost of steel and aluminium which could have impacted the cost of the project and trump also caused a trade deficit of 200 Billion Dollars in canada.
+    Find out factors that could impact the construction project and affect the budget and timeline of the project.
+  expected_output: >
+    A properly formatted dictionary of comprehensive market analysis report detailing key trends, risks, and opportunities.thorougly analyse and DO NOT miss a single parameter and predict and then Mention how the Market and geopolitical factors or any other factors would affect the construction budget and Projects.
+  agent: integrated_project_analysis_agent
+
+cost_estimation_task:
+  description: >
+    Analyze the output from the previous task and Analyze real-time data on material prices, labor rates, transportation costs, and compliance expenses to estimate project costs. Identify key cost drivers and hidden expenses. Provide insights into managing cost fluctuations and maintaining budget alignment. 
+    For more context, analyzie the market values as given in the tools.
+  expected_output: >
+    Generate a properly formatted dictionary of detailed cost estimation pdf file that can be submitted to the board of the financial executives which will massively help them to take a decision of the budget and also tell them the range and reason out why the range has been selected and give a detailed summary for the budget range outlining the breakdown of possible project expenses, including materials, labor, transportation, and compliance costs with numerical values.
+    Highlight potential hidden costs and fluctuations to ensure accurate budgeting and financial sustainability which can serve as a base for a financial executives board meeting.
+  agent: cost_estimation_agent
+
+bid_optimization_task:
+  description: >
+    Analyze data provided before to optimize tender selection focusing on balancing quality, cost, and minimizing risk to recommend the most suitable tender for the project. Use previous responses and insights gathered to provide a clear rationale for each recommendation, ensuring the selected tender meets project standards and strategic objectives.
+    Make sure to take a decision based on their historic success, quality of work, alignment with project, budget and policy constraints and other market, geopolitical factors.
+  expected_output: >
+    A proper structured dictionary form report on each tender with a detailed analysis of the tender, the quality of work, the cost, the risk involved, the alignment with the project, budget and policy constraints and other market, geopolitical factors.
+    Highlight the chosen best suited tender as aligned with the project goals, budgest constraints and company policies.
+  agent: bid_optimization_agent
+
+dashboard_task:
+  description: >
+    Provide a detailed exploratory data analysis on all the previous Aggregated outputs into a consolidated report and also provide graphs for the same. Summarize critical metrics, such as costs, and resource evaluation, to provide a comprehensive overview of the project's decision-making data. Ensure the report is structured and clear for stakeholders to review.
+  expected_output: >
+    A structured, consolidated report with graphs and visuals summarizing key metrics from all agents, including tender optimization insights, risk evaluations, and cost analysis. Provide actionable intelligence to support strategic decision-making.
+  agent: dashboard_agent
